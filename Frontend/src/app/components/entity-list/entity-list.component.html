@@ -1,0 +1,16 @@
+<div class="header-container">
+  <h1>Applications List</h1>
+  <button routerLink="/create" class="create-btn">Create New Application</button>
+  </div>
+  <div class="app-list">
+    <div *ngFor="let application of applications" class="app-card">
+      <h2>{{ application.name }}</h2>
+      <div class="form-actions">
+        <button class="details-btn" (click)="navigateToDetails(application._id || '')">Details</button>
+        <button class="edit-btn" (click)="navigateToEdit(application._id || '')">Edit</button>
+        <button class="delete-btn" *ngIf="application._id" (click)="navigateToDelete(application._id)">Delete</button>
+       </div>
+      </div>
+</div>
+  <ng-template #noData><p>No applications found.</p></ng-template>
+  

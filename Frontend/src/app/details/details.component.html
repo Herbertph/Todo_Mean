@@ -1,0 +1,23 @@
+d<div class="header-container">
+    <h1>Application Details</h1>
+</div>
+<div class="app-list">
+  <div *ngIf="application; else noData" class="app-card">
+    <h2>{{ application.name }}</h2>
+    <p><strong>Tech Stack:</strong> {{ application.techStack }}</p>
+    <p><strong>Status:</strong> {{ application.deployed ? 'Deployed' : 'Not Deployed' }}</p>
+    <p><strong>Monthly Cost:</strong> ${{ application.monthlyCost }}</p>
+    <p><strong>Cloud Hosting:</strong> {{ application.cloudHostingPlatform }}</p>
+    <div class="form-actions">
+        <button class="edit-btn" (click)="navigateToEdit(application._id || '')">Edit</button>
+        <button class="delete-btn" *ngIf="application._id" (click)="navigateToDelete(application._id)">Delete</button>
+       
+    </div>
+    <div class="form-actions">
+        <button routerLink="/" class="back-btn">Back to List</button>
+    </div>
+</div>
+</div>
+  
+  <ng-template #noData><p>No application details found.</p></ng-template>
+  

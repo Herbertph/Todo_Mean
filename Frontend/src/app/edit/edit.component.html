@@ -1,0 +1,34 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    <div>
+      <label for="techStack">Tech Stack</label>
+      <input type="text" id="techStack" formControlName="techStack">
+    </div>
+    <div>
+      <label for="deployed">Deployed</label>
+      <input type="checkbox" id="deployed" formControlName="deployed">
+    </div>
+    <div>
+      <label for="monthlyCost">Monthly Cost</label>
+      <input type="number" id="monthlyCost" formControlName="monthlyCost">
+    </div>
+    <div>
+      <label for="cloudHostingPlatform">Cloud Hosting Platform</label>
+      <select id="cloudHostingPlatform" formControlName="cloudHostingPlatform">
+        <option value="">Select one</option>
+        <option value="Azure">Azure</option>
+        <option value="AWS">AWS</option>
+        <option value="GCP">GCP</option>
+        <option value="Cloudfare">Cloudfare</option>
+        <option value="Cyclic">Cyclic</option>
+      </select>
+    </div>
+    <div class="form-actions">
+        <button type="submit">Update</button>
+        <button type="button" (click)="cancelEdit()">Cancel</button>
+    </div>
+  </form>
+  

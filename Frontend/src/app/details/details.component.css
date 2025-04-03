@@ -1,0 +1,101 @@
+.header-container {
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  .app-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .app-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      transition: transform 0.2s;
+    }
+     
+    .app-card h2 {
+      color: #333;
+      font-size: 24px;
+    }
+    
+    .app-card p {
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    .deployed {
+      color: green;
+    }
+    
+    .app-card p:not(.deployed) {
+      color: #333;
+    }
+    
+    .delete-btn {
+      padding: 10px 15px;
+      background-color: #d9534f; 
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+    }
+    
+    .delete-btn:hover,
+    .delete-btn:focus {
+      background-color: #c9302c; 
+      transform: scale(1.05);
+    }
+    
+    .delete-btn:active {
+      transform: scale(0.95); 
+    }
+
+    .edit-btn {
+      padding: 10px 15px;
+      background-color: #ffc107; 
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.1s ease;
+    }
+    
+    .edit-btn:hover,
+    .edit-btn:focus {
+      background-color: #ffc107; 
+      transform: scale(1.05); 
+    }
+    
+    .edit-btn:active {
+      background-color: #b98c05; 
+      transform: scale(0.95); 
+    }
+  
+    .form-actions {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+        margin-top: 20px; 
+      }
+    
+      .form-actions button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        flex: 1; 
+        margin: 0 10px; 
+      }
